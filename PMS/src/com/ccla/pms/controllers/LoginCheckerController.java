@@ -33,13 +33,14 @@ public class LoginCheckerController extends HttpServlet {
 		LogginCheckerVo vo =null;
 		boolean flag = false;
 		RequestDispatcher rd = null;
+		vo = new LogginCheckerVo();
 		
 		vo.setUserid(req.getParameter("userId"));
 		vo.setPassword(req.getParameter("password"));
 		try {
 			flag = service.loginValidater(vo);
 			if(flag) {
-				rd = req.getRequestDispatcher("");
+				rd = req.getRequestDispatcher("/Home.jsp");
 				rd.forward(req,res);
 			}	
 			else {

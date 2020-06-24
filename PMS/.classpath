@@ -12,7 +12,7 @@
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/jasper.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/10.2.0/server/jdbc/lib/ojdbc14.jar"/>
 	<classpathentry kind="lib" path="C:/Users/cmro-pmu/Downloads/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/cmro-pmu/Desktop/ojdbc14.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
