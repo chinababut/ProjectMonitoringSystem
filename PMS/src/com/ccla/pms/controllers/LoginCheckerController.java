@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.ccla.pms.error.InternalDbProblem;
 import com.ccla.pms.servicedeligates.LoginService;
@@ -17,12 +18,17 @@ import com.ccla.pms.vo.LogginCheckerVo;
 @WebServlet("/LoginCheckerController")
 public class LoginCheckerController extends HttpServlet {
 	
+	
+	private static final long serialVersionUID = 1L;
 	private LoginService service;
+	HttpSession session;
 	
     @Override
     public void init() throws ServletException {
     	
     	service = new LoginService();
+    	
+    	
     
     }   
     
@@ -38,6 +44,8 @@ public class LoginCheckerController extends HttpServlet {
 		vo.setUserid(req.getParameter("userId"));
 		vo.setPassword(req.getParameter("password"));
 		try {
+			session=req.getSession();  
+			session.setAttribute("logins", vo);
 			flag = service.loginValidater(vo);
 			if(flag) {
 				rd = req.getRequestDispatcher("/Home.jsp");
