@@ -36,7 +36,7 @@
 		</li>
 		<li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i>Reports</a></li>
 		<li><a href="dashboard.jsp"><i class="fa fa-th-large" aria-hidden="true"></i>DashBoard</a></li>
-		<li><a href="/contact"><i class="fa fa-address-book" aria-hidden="true"></i>Contact Us</a></li>
+		<li><a href="contact.jsp"><i class="fa fa-address-book" aria-hidden="true"></i>Contact Us</a></li>
 		<li><a href="signout.jsp"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
 
 </ul>
