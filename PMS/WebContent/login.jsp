@@ -9,13 +9,15 @@
 	
 </head>
 <body>
+	<p align="center"><font color="red" font-family: sans-serif>${errMsg}</font></p>
+	<p align="center"><font color="red">${invalid}</font></p>
 	<br>
 	<br>
-	<p align="center"><font color="red">${errMsg}</font></p>
+	
 	 
 <form action="LoginCheckerController" method="POST">
 <div class="loginBox"> 
- <img src="/resources/imgs/logo.jpg" class="user"> 
+ <img src="logo.jpg" class="user"> 
  <h2>Log In Here</h2> 
  
   <p>User Name</p> 

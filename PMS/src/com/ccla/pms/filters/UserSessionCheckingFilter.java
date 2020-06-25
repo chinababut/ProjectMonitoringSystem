@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebFilter( "/*" )
+@WebFilter({ "/login.jsp" ,"/Home.jsp"})
 public class UserSessionCheckingFilter extends HttpFilter implements Filter {
        
    
@@ -33,6 +33,7 @@ public class UserSessionCheckingFilter extends HttpFilter implements Filter {
 		if(ses!=null && ses.getAttribute("logins")!=null)
 	          	chain.doFilter(req, res);
 		else {
+			System.out.println("Http Session:"+ses);
 			req.setAttribute("errMsg", "Session expired please login again");
 			//foward to login.jsp
 			rd=req.getRequestDispatcher("/login.jsp");
