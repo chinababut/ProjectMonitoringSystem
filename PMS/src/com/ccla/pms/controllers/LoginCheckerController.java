@@ -42,12 +42,12 @@ public class LoginCheckerController extends HttpServlet {
 			session.setAttribute("logins", vo);
 			flag = service.loginValidater(vo);
 			if (flag) {
-				rd = req.getRequestDispatcher("/Home.jsp");
+				rd = req.getRequestDispatcher("/PMS/WebContent/views/Home.jsp");
 				rd.forward(req, res);
 			} else {
 
 				req.setAttribute("invalid", "Invalid User Id and Password");
-				rd = req.getRequestDispatcher("/login.jsp");
+				rd = req.getRequestDispatcher("/views/login.jsp");
 				rd.forward(req, res);
 			}
 		}
